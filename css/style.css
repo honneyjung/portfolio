@@ -1,90 +1,610 @@
 * {
-	margin: 0;
-	padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
-
-/* nav */
-
-nav {
-	position: fixed;
-	top: 20px;
-	z-index: 1000;
-	background: rgba(0, 0, 0, 0.4);
-	padding: 15px 20px;
-  width: 100%;
-}
-nav .gnb{
-  display: flex;
-  width: 100%;
-  max-width: 1600px;
-  margin:auto;
-}
-nav li {
-	list-style: none;
-  flex:1 1 200px;
-}
-nav li a {
-	color: #fff;
-	text-decoration: none;
-	display: inline-block;
-	padding: 5px;
-	width: 30px;
-	height: 30px;
-	text-align: center;
-	line-height: 30px;
-  position: relative;
-  position: relative;
-}
-nav li a:before {
-	content: '';
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 2px;
-	background-color: #3d3d3d;
-	transform: scaleX(0);
-	transition: all 0.5s;
-	transform-origin: left
+@font-face {
+    font-family: "MADE Outer Sans";
+    src: url("../font/MADEOuterSanLight.otf") format("otf"),
+        url("../font/MADEOuterSansThin.otf") format("otf"),
+        url("../font/MADEOuterSansRegular.otf") format("otf"),
+        url("../font/MADEOuterSansMedium.otf") format("otf"),
+        url("../font/MADEOuterSansBold.otf") format("otf"),
+        url("../font/MADEOuterSansBlack.otf") format("otf"),
 }
 
-ul li.active a:before, ul li.active a:after, ul li a:hover:before, ul li a:hover:after {
-  transform: scaleX(1);
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
-ul li a:after {
- content: '';
- position: absolute;
- bottom: 0;
- left: 0;
- width: 100%;
- height: 2px;
- background-color: #3d3d3d;
- transform: scaleX(0);
- transition: all 0.5s;
- transform-origin: right
+@font-face {
+    font-family: "GmarketSansLight";
+    src: url(../font/GmarketSansLight.otf);
 }
 
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url(../font/GmarketSansMedium.otf);
+}
 
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url(../font/GmarketSansBold.otf);
+}
+
+/*---------------------------nav--------------------------*/
+
+#nav {
+    position: fixed;
+    z-index: 1000;
+    background: #fff;
+    width: 100%;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 8%);
+}
+
+#nav .gnb_inner {
+    display: flex;
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    align-items: center;
+}
+
+#nav li {
+    list-style: none;
+    flex: 1 1 200px;
+    text-align: center;
+    height: 70px;
+    line-height: 70px;
+}
+
+#nav li a {
+    color: #0505af;
+    text-decoration: none;
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    position: relative;
+    font-family: "MADE Outer Sans";
+}
+
+#nav .gnb_inner .logo img {
+    vertical-align: middle;
+}
+
+#nav .gnb_inner li a.logo:hover img {
+    animation: tong 0.3s ease 0s infinite alternate;
+}
+
+@keyframes tong {
+    0% {
+        transform: translate(0, 20%);
+    }
+
+    100% {
+        transform: translate(0, -20%);
+    }
+}
+
+#nav ul li.active a:after,
+#nav ul li a:hover:after {
+    transform: scaleX(1);
+}
+
+#nav ul li a:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7px;
+    background: url(../images/effect_img.png) no-repeat center center/cover;
+    transform: scaleX(0);
+    transition: all 0.5s;
+    transform-origin: left
+}
+
+#nav .gnb_inner li a.logo:after {
+    background-image: none;
+}
 
 /* container */
-
 .container {
-	max-width: 1600px;
-	margin: 0 auto;
-	width: 100%;
-	overflow: hidden;
+    max-width: 1400px;
+    margin: auto;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*-----------------------------section---------------------------*/
+.section {
+    width: 100%;
+    max-width: 1400px;
+    margin: auto;
+    position: relative;
+    display: flex;
+    outline: 1px solid red;
+}
+
+/*-----------------------------section1---------------------------*/
+#section1 {
+    min-height: 937px;
+    background: url(../images/main_profile_img.jpg) no-repeat center center;
+    display: flex;
+}
+
+#section1 .button_box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 400px;
+    left: 10px;
+
+}
+
+#section1 .button_box button {
+    width: 200px;
+    height: 50px;
+    color: #0505af;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-family: "MADE Outer Sans";
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
+    border-radius: 60px;
+
+}
+
+#section1 .button_box .btn {
+    background: linear-gradient(0deg, #fff 0%, #fff 100%);
+    border: none;
+}
+
+#section1 .button_box .btn:before {
+    height: 0%;
+    width: 2px;
+}
+
+#section1 .button_box .btn:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .5);
+    background: #0505af;
+    color: #fff;
+}
+
+#section1 .main_slogan {
+    height: fit-content;
+    position: absolute;
+    top: 400px;
+    right: 100px;
+}
+
+#section1 .main_slogan strong {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+#section1 .main_slogan strong span {
+    color: #0505af;
 }
 
 
-/* section */
-.section {
-	width: 1000px;
-	max-width: 70vw;
-	margin: 40vw auto;
-	text-align: right;
-	position: relative;
-	padding: 10vw 0;
-	background: yellow;
+
+
+/*----------------------------section2----------------------*/
+#section2 {
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+#section2 .slogan_box {
+    width: 80%;
+    margin: 90px auto;
+    font-size: 110px;
+    text-align: center;
+    line-height: 220px;
+    visibility: hidden;
+}
+
+.lines {
+    width: 100%;
+}
+
+.hide {
+    overflow: hidden;
+}
+
+#section2 .profile_img {
+    background: url(../images/profile_img.png) no-repeat center center / contain;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+#section2 .text_box {
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+
+#section2 .text_box p {
+    text-align: center;
+    font-size: 120px;
+    margin: 20px 0 50px 0;
+    font-family: 'InkLipquid';
+    color: #0505af;
+    position: absolute;
+    top: -70px;
+    left: 38%;
+}
+
+#section2 .text_box .txt_lf_box {
+    width: 50%;
+    outline: 1px solid greenyellow;
+    margin-top: 130px;
+    font-family: 'GmarketSansLight', sans-serif;
+}
+
+#section2 .text_box div span {
+    font-size: 25px;
+    font-family: 'GmarketSansMedium', sans-serif;
+
+}
+
+#section2 .text_box div .about_me {
+    text-align: left;
+    font-size: 25px;
+    display: flex;
+    margin-top: 10px;
+}
+
+#section2 .text_box div ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 27px;
+    letter-spacing: -0.5px;
+}
+
+#section2 .text_box .txt_lf_box .about_me ul.about_title {
+    width: 30%;
+}
+
+#section2 .text_box div ul li {
+    font-size: 20px;
+}
+
+#section2 .text_box div .education {
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+#section2 .text_box div .edu_title {
+    margin-right: 30px;
+}
+
+#section2 .text_box div .career {
+    display: flex;
+}
+
+#section2 .text_box .txt_rgt_box {
+    width: 50%;
+    outline: 1px solid orange;
+    margin-top: 130px;
+    font-family: 'GmarketSansLight', sans-serif;
+
+}
+
+#section2 .text_box .txt_rgt_box div ul {
+    margin-top: 10px;
+}
+
+/*----------------------------section 3-----------------------*/
+#section3 {
+    width: 100%;
+    height: 80vh;
+}
+
+#section3 .charts {
+    width: 100%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#section3 .charts .left_chart {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#section3 .charts .right_chart {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#section3 .charts .chart {
+    margin: 0 30px;
+    position: relative;
+}
+
+#section3 .charts .chart h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section3 .charts .chart svg {
+    width: 220px;
+    height: 220px;
+}
+
+circle {
+    fill: #fff;
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    stroke-width: 20;
+    animation: line 2s forwards;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-linecap: round;
+}
+
+@keyframes line {
+    from {
+        stroke-dashoffset: 628;
+    }
+
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+#section3 .charts .chart:nth-child(1) circle {
+    stroke: #87bfff;
+}
+
+#section3 .charts .chart:nth-child(2) circle {
+    stroke: #2667ff;
+}
+
+#section3 .charts .chart:nth-child(3) circle {
+    stroke: #192bc2;
+}
+
+#section3 .charts .chart:nth-child(4) circle {
+    stroke: #150578;
+}
+
+/*-----------------------section4 - project1--------------------*/
+.portfolio.project1 {
+    padding: 0;
+    min-height: 100vh;
+}
+
+.left {
+    position: absolute;
+    /* transform: translateX(-100vw);
+    opacity: 0;
+    transition: all 2s ease-in-out; */
+    width: 33%;
+    left: 0;
+    top: 280px;
+    left: 100px;
+
+}
+
+.left.in {
+    transform: translateX(0vw);
+    opacity: 1;
+}
+
+/*-----------------------좌측 모니터-------------------------------*/
+.mockup.left_pc {
+    width: 500px;
+    height: 500px;
+    position: relative;
+
+}
+
+.mockup.left_pc .computer {
+    position: absolute;
+    width: 100%;
+}
+
+.mockup.left_pc a.hidden {
+    display: block;
+    width: 452px;
+    height: 254px;
+    position: absolute;
+    overflow: hidden;
+    top: 23px;
+    left: 24px;
+}
+
+.left_pc .hidden img {
+    width: 100%;
+    position: relative;
+}
+
+.mockup.left_pc .phone {
+    position: absolute;
+    width: 110px;
+    right: -50px;
+    bottom: 0;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    width: 33%;
+    top: 250px;
+    right: 100px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+/*------------------------우측 project_info-----------------------------*/
+.project_info {
+    position: absolute;
+    top: -50px;
+}
+
+.project_info>* {
+    font-size: 1vw;
+    transition: all 2s cubic-bezier(0, 0.66, 0.38, 1.04);
+}
+
+.project_info h2 {
+    font-size: 30px;
+    padding-bottom: 10px;
+    color: #0505af;
+}
+
+.project_info ul li {
+    font-size: 14px;
+    padding: 5px 20px;
+}
+
+.project_info ul li::before {
+    content: "";
+    display: block;
+    background: url(../images/list_ico.png) no-repeat center center;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 0;
+    margin-top: 2px;
+}
+
+.project_info p.sub_tit {
+    font-size: 24px;
+    margin: 30px 0 10px 0;
+}
+
+.project_info .text_box {
+    font-size: 16px;
+    border-top: 5px solid #0505af;
+    padding: 10px 0;
+    line-height: 35px;
+    letter-spacing: -1.2px;
+}
+
+.project_info .info_box div {
+    display: flex;
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.project_info .info_box div span {
+    font-weight: bold;
+}
+
+.project_info .info_box .using_program .html {
+    background: url(../images/html\ \(1\).png) no-repeat center center/contain;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.project_info .info_box .using_program .css {
+    background: url(../images/css\ \(1\).png) no-repeat center center/contain;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.project_info .info_box .using_program .jq {
+    background: url(../images/javascript.png) no-repeat center center/contain;
+    width: 50px;
+    height: 50px;
+    display: block;
+}
+
+.project_info .info_box .git {
+    background: url(../images/github_ico.png) no-repeat center center/contain;
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+/*------------------------section 4 - project2---------------------*/
+#section5 {
+    width: 100%;
+    height: 100vh;
+}
+
+.mockup.right_pc {
+    width: 500px;
+    height: 500px;
+    position: relative;
+    right: 30px;
+}
+
+.mockup.right_pc .computer {
+    position: absolute;
+    width: 100%;
+}
+
+.mockup.right_pc a.hidden {
+    display: block;
+    width: 452px;
+    height: 254px;
+    position: absolute;
+    overflow: hidden;
+    top: 23px;
+    left: 24px;
+}
+
+.right_pc .hidden img {
+    width: 100%;
+    position: relative;
+}
+
+/*-------------------------section5------------------------*/
+#section6 {
+    width: 100%;
+    height: 100vh;
+}
+
+#section6 .left .mockup .notebook {
+    width: 400px;
+    position: absolute;
+    top: 157px;
+    left: 200px;
+
+}
+
+#section7 {
+    width: 100%;
+    height: 100vh;
+}
+
+#section8 {
+    width: 100%;
+    height: 100vh;
+}
+
+#section9 {
+    width: 100%;
+    height: 100vh;
 }
