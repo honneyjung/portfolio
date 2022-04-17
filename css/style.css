@@ -3,8 +3,39 @@
     padding: 0;
 }
 
+@font-face {
+    font-family: "MADE Outer Sans";
+    src: url("../font/MADEOuterSanLight.otf") format("otf"),
+        url("../font/MADEOuterSansThin.otf") format("otf"),
+        url("../font/MADEOuterSansRegular.otf") format("otf"),
+        url("../font/MADEOuterSansMedium.otf") format("otf"),
+        url("../font/MADEOuterSansBold.otf") format("otf"),
+        url("../font/MADEOuterSansBlack.otf") format("otf"),
+}
 
-/* nav */
+@font-face {
+    font-family: 'InkLipquid';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/InkLipquid.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "GmarketSansLight";
+    src: url(../font/GmarketSansLight.otf);
+}
+
+@font-face {
+    font-family: "GmarketSansMedium";
+    src: url(../font/GmarketSansMedium.otf);
+}
+
+@font-face {
+    font-family: "GmarketSansBold";
+    src: url(../font/GmarketSansBold.otf);
+}
+
+/*---------------------------nav--------------------------*/
 
 #nav {
     position: fixed;
@@ -38,6 +69,7 @@
     height: 30px;
     text-align: center;
     position: relative;
+    font-family: "MADE Outer Sans";
 }
 
 #nav .gnb_inner .logo img {
@@ -88,23 +120,29 @@
     overflow: hidden;
 }
 
-/* section */
+/*-----------------------------section---------------------------*/
 .section {
     width: 100%;
     max-width: 1400px;
     margin: auto;
     position: relative;
+    display: flex;
     outline: 1px solid red;
+}
+
+.portfolio {
     display: flex;
 }
 
-.container #section1 {
+
+/*-----------------------------section1---------------------------*/
+#section1 {
     min-height: 937px;
-    background: url(../images/main_profile_img.jpg) no-repeat center center;
-    margin-left: 20px;
+    background: url(../images/sec1/main_profile_img.jpg) no-repeat center center;
+    display: flex;
 }
 
-.container #section1 .button_box {
+#section1 .button_box {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -112,61 +150,290 @@
     height: 200px;
     position: absolute;
     top: 400px;
-    /* left: 10px; */
+    left: 10px;
 
 }
 
-.container #section1 .button_box a {
-    text-decoration: none;
-    /* position: relative; */
-}
-
-.wave {
-    background: none;
+#section1 .button_box button {
+    width: 200px;
+    height: 50px;
     color: #0505af;
-    padding: 20px 40px;
-    font-size: 25px;
-    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 10px 25px;
+    font-size: 20px;
+    font-family: "MADE Outer Sans";
+    background: #fff;
     cursor: pointer;
-    transition: all 0.5s;
-    position: relative;
-    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, .5),
+        7px 7px 20px 0px rgba(0, 0, 0, .1),
+        4px 4px 5px 0px rgba(0, 0, 0, .1);
     border-radius: 60px;
-    box-shadow: rgba(0, 0, 0, 0.44) 0px 5px 15px -5px;
+
 }
 
-.wave:hover {
-    color: white;
+#section1 .button_box .btn {
+    background: linear-gradient(0deg, #fff 0%, #fff 100%);
+    border: none;
 }
 
-.wave:before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #0505af;
-    z-index: -1;
-    border-radius: 50% 50% 0% 0%;
+#section1 .button_box .btn:before {
     height: 0%;
-    transition: all 0.5s;
-}
- 
-.wave:hover:before {
-    height: 190%;
-}
-/* section2 */
-#section2{
-    width: 100%;
-    height: 100vh;
-}
-#section3{
-    width: 100%;
-    height: 100vh;
+    width: 2px;
 }
 
-/* section4 - project1 */
+#section1 .button_box .btn:hover {
+    box-shadow: 4px 4px 6px 0 rgba(255, 255, 255, .5),
+        -4px -4px 6px 0 rgba(116, 125, 136, .5),
+        inset -4px -4px 6px 0 rgba(255, 255, 255, .2),
+        inset 4px 4px 6px 0 rgba(0, 0, 0, .5);
+    background: #0505af;
+    color: #fff;
+}
+
+#section1 .main_slogan {
+    height: fit-content;
+    position: absolute;
+    top: 400px;
+    right: 100px;
+}
+
+#section1 .main_slogan strong {
+    font-size: 30px;
+    line-height: 50px;
+}
+
+#section1 .main_slogan strong span {
+    color: #0505af;
+}
+
+
+
+
+/*----------------------------section2----------------------*/
+#section2 {
+    width: 100%;
+    flex-direction: column;
+    padding-bottom: 100px;
+}
+
+#section2 .sub_slogan{
+    outline: 1px solid red;
+    width: 70%;
+    margin: 90px auto;
+
+}
+#section2 .sub_slogan .slogan_box > * {
+    display: block;
+    font-size: 5vw;
+    text-align: center;
+    line-height: 220px;
+    transition: all 2s;
+}
+.slogan_1 {
+	opacity: 0;
+	transform: translateY(200px);
+	transform-origin: 0 0;
+	transition: all 2s;
+    transition-delay: 5s;
+
+}
+.slogan_2 {
+	opacity: 0;
+	transform: translateY(200px);
+	transition: all 10s;
+    transition-delay: 10s;
+
+}
+.slogan_3 {
+	opacity: 0;
+	transform: translateY(200px);
+	transition: all 6s;
+    transition-delay: 9s;
+
+}
+.slogan_4 {
+	opacity: 0;
+	transform: translateY(200px);
+	transition: all 8s;
+    transition-delay: 12s;
+
+}
+.slogan_1.show {
+	opacity: 1;
+	transform: translateY(0px) scaleY(1);
+}
+.slogan_2.show {
+	opacity: 1;
+	transform: translateY(0px);
+}
+.slogan_3.show {
+	opacity: 1;
+	transform: translateY(0px);
+}
+.slogan_4.show {
+	opacity: 1;
+	transform: translateY(0px);
+}
+
+
+#section2 .profile_img {
+    background: url(../images/sec2/profile_img.png) no-repeat center center / contain;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+}
+
+#section2 .text_box {
+    width: 80%;
+    height: auto;
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+
+#section2 .text_box p {
+    text-align: center;
+    font-size: 120px;
+    margin: 20px 0 50px 0;
+    font-family: 'InkLipquid';
+    color: #0505af;
+    position: absolute;
+    top: -70px;
+    left: 38%;
+}
+
+#section2 .text_box .txt_lf_box {
+    width: 50%;
+    outline: 1px solid greenyellow;
+    margin-top: 130px;
+    font-family: 'GmarketSansLight', sans-serif;
+}
+
+#section2 .text_box div span {
+    font-size: 25px;
+    font-family: 'GmarketSansMedium', sans-serif;
+
+}
+
+#section2 .text_box div .about_me {
+    text-align: left;
+    font-size: 25px;
+    display: flex;
+    margin-top: 10px;
+}
+
+#section2 .text_box div ul {
+    display: flex;
+    flex-direction: column;
+    line-height: 27px;
+    letter-spacing: -0.5px;
+}
+
+#section2 .text_box .txt_lf_box .about_me ul.about_title {
+    width: 30%;
+}
+
+#section2 .text_box div ul li {
+    font-size: 20px;
+}
+
+#section2 .text_box div .education {
+    display: flex;
+    margin-bottom: 20px;
+
+}
+
+#section2 .text_box div .edu_title {
+    margin-right: 30px;
+}
+
+#section2 .text_box div .career {
+    display: flex;
+}
+
+#section2 .text_box .txt_rgt_box {
+    width: 50%;
+    outline: 1px solid orange;
+    margin-top: 130px;
+    font-family: 'GmarketSansLight', sans-serif;
+
+}
+
+#section2 .text_box .txt_rgt_box div ul {
+    margin-top: 10px;
+}
+
+
+/*----------------------------section 3-----------------------*/
+#section3 {
+    width: 100%;
+    height: 80vh;
+}
+
+#section3 .charts {
+    width: 100%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#section3 .charts .left_chart {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#section3 .charts .right_chart {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#section3 .charts .chart {
+    margin: 0 30px;
+    position: relative;
+}
+
+#section3 .charts .chart h2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#section3 .charts .chart svg {
+    width: 220px;
+    height: 220px;
+}
+
+circle {
+    fill: #fff;
+    stroke-dasharray: 628;
+    stroke-dashoffset: 628;
+    stroke-width: 20;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-linecap: round;
+}
+
+#section3 .charts .chart:nth-child(1) circle {
+    stroke: #87bfff;
+}
+
+#section3 .charts .chart:nth-child(2) circle {
+    stroke: #2667ff;
+}
+
+#section3 .charts .chart:nth-child(3) circle {
+    stroke: #192bc2;
+}
+
+#section3 .charts .chart:nth-child(4) circle {
+    stroke: #150578;
+}
+
+/*-----------------------section4 - project1--------------------*/
+
 .portfolio.project1 {
     padding: 0;
     min-height: 100vh;
@@ -174,55 +441,53 @@
 
 .left {
     position: absolute;
-    /* transform: translateX(-100vw);
-    opacity: 0;
-    transition: all 2s ease-in-out; */
-    width: 33%;
-    left: 0;
-    top: 280px;
+    display: flex;
     left: 100px;
-
 }
-
-.left.in {
-    transform: translateX(0vw);
-    opacity: 1;
-}
-
-/* 좌측 모니터 */
-.mockup.left_pc {
+.mockup {
     width: 500px;
     height: 500px;
     position: relative;
-
+    top: 260px;
 }
 
-.mockup.left_pc .computer {
+.mockup .computer {
     position: absolute;
     width: 100%;
 }
+.mockup .phone{
+    position: absolute;
+    width: 110px;
+    top: 212px;
+    left: -50px;
+}
 
-.mockup.left_pc a.hidden {
+.mockup.left_pc a.hidden,.mockup.right_pc a.hidden {
     display: block;
     width: 452px;
     height: 254px;
     position: absolute;
     overflow: hidden;
-    top: 23px;
+    top: 24px;
     left: 24px;
 }
-
-.left_pc .hidden img {
-    width: 100%;
-    position: relative;
-}
-
-.mockup.left_pc .phone {
+.mockup.iphone a.hidden {
+    display: block;
+    width: 98px;
+    height: 208px;
     position: absolute;
-    width: 110px;
-    right: -50px;
-    bottom: 0;
+    overflow: hidden;
+    top: 217px;
+    left: -44px;
+    border-radius: 11px;
 }
+.hidden img {
+    position: relative;
+    width: 100%;
+}
+
+
+/*-----------------------좌측 모니터-------------------------------*/
 
 .right {
     position: absolute;
@@ -235,11 +500,12 @@
 
 }
 
-/* 우측 프로젝트 인포 */
-.project_info{
+/*------------------------우측 project_info-----------------------------*/
+.project_info {
     position: absolute;
     top: -50px;
 }
+
 .project_info>* {
     font-size: 1vw;
     transition: all 2s cubic-bezier(0, 0.66, 0.38, 1.04);
@@ -310,6 +576,7 @@
     height: 50px;
     display: block;
 }
+
 .project_info .info_box .git {
     background: url(../images/github_ico.png) no-repeat center center/contain;
     width: 30px;
@@ -317,60 +584,76 @@
     display: block;
 }
 
-/* section 4 - project2 */
+/*-------------------------section5------------------------*/
 #section5 {
     width: 100%;
     height: 100vh;
 }
-
-.mockup.right_pc {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    right: 30px;
+#section5 .left {
+    position: absolute;
+    width: 33%;
+    height: 100px;
+    left: 0;
+    top: 280px;
+    left: 100px;
+}
+#section5 .right_pc{
+    position: absolute;
+    top: 0;
 }
 
-.mockup.right_pc .computer {
+/*-------------------------section6------------------------*/
+#section6 {
+    width: 100%;
+    height: 100vh;
+}
+#section6 .left_pc{
+    margin-left: 40px;
+    left: 20px;
+}
+
+#section6 .macbook{
+    width: 350px;
+    height: 220px;
+    position: absolute;
+    top: 470px;
+    left: -100px;
+}
+#section6 .mockup .notebook{
     position: absolute;
     width: 100%;
 }
-
-.mockup.right_pc a.hidden {
+#section6 .macbook a.hidden {
     display: block;
-    width: 452px;
-    height: 254px;
+    width: 267px;
+    height: 168px;
     position: absolute;
     overflow: hidden;
-    top: 23px;
-    left: 24px;
+    top: 16px;
+    left: 42px;
 }
-
-.right_pc .hidden img {
+#section6 .macbook .hidden img{
     width: 100%;
     position: relative;
 }
 
-/* section5 */
-#section6{
+/* -----------------------section7 -------------------- */
+#section7 {
     width: 100%;
     height: 100vh;
 }
-#section6 .left .mockup .notebook{
-    width: 400px;
-    position: absolute;
-    top: 157px;
-    left: 200px;
+#section7 .left{
+    width: 33.3%;
+}
 
-}
-#section7{
+/* -----------------------section8------------------------ */
+#section8 {
     width: 100%;
     height: 100vh;
 }
-#section8{
-    width: 100%;
-    height: 100vh;
-}
-#section9{
+
+/* -----------------------section9------------------------ */
+#section9 {
     width: 100%;
     height: 100vh;
 }
