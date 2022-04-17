@@ -11,56 +11,73 @@ topmenu.click(function (e) {
 	$("html,body").animate({ scrollTop: offset }, 1000, "easeOutCirc")
 })
 
-//스크롤이벤트
+/*------------------스크롤시 글자 한줄씩 올라오게하기------------------*/
 $(window).on("scroll", function () {
 	let scrollTop = $(window).scrollTop()
 	sections.each(function (i, o) {
 		if (scrollTop >= sections.eq(i).offset().top - speed) {
-			console.log(sections.eq(i).offset().top - speed)
-			$("#nav ul.gnb_inner li").eq(i).addClass("active").siblings().removeClass("active")
-		} else if (scrollTop >= sections.eq(2).offset().top - speed) {
-			sections.eq(2).find(".left").addClass("in");
-			sections.eq(2).find("span").addClass("show");
+			//console.log(sections.eq(i).offset().top - speed)
+			$("#nav ul.gnb_inner li").eq(i).addClass("active").siblings().removeClass("active");
+			sections.eq(i).find(".sub_slogan span").addClass("show");
 		}
 	})
 })
 
-$(".left_pc .hidden").hover(
+
+
+/*-----------마우스 호버시 프로젝트 스크롤------------*/
+$(".hidden").hover(
 	function () {
-		let ah = $(this).innerHeight()
-		let img = $(this).find("img")
-		let imgh = img.innerHeight()
-		img.stop().animate({ top: ah - imgh }, 3000)
+		let ah=$(this).innerHeight();
+		let img=$(this).find("img");
+		let imgh=img.innerHeight();
+		img.stop().animate({top:ah-imgh},3000)
 	},
 	function () {
 		let img = $(this).find("img")
 		img.stop().animate({ top: 0 }, 3000)
 	}
 )
-/*slogan-*/ 
-let p = gsap.utils.toArray("span");
 
-gsap.set(p, { autoAlpha: 1 });
 
-p.forEach((p) => {
-  let splitHide = new SplitText(p, {
-    type: "words",
-    wordsClass: "hide"
-  });
+/*-------- 스킬 애니메이션 -----------*/ 
+$(function(){
+    var charts = $('.charts');
+    var chart = $('.chart');
+    var chartOST = chart.offset().top - 700;
+    // var excuted = false;
+    // console.log(excuted);
 
-  let split = new SplitText(p, {
-    type: "words,lines",
-    linesClass: "lines",
-    wordsClass: "words"
-  });
+    $(window).scroll(function(){
+        var currentSCT = $(this).scrollTop();
+        if(currentSCT >= chartOST){
+            if(!charts.hasClass('active')){
+                animateChart();
+                charts.addClass('active');
+            }
+        }
+    });
 
-  gsap.from(split.words, {
-    duration: 1.2,
-    yPercent: 100,
-    ease: "power3.out",
-    stagger: 0.04,
-    scrollTrigger: {
-      trigger: p
+
+    function animateChart(){
+        chart.each(function(){
+            var item = $(this);
+            var title = item.find('h2');
+            var targetNum = title.attr('data-num');
+            var circle = item.find('circle');
+    
+            $({rate:0}).animate({rate:targetNum},
+                {
+                    duration:1500,
+                    progress:function(){
+                        var now = this.rate;
+                        var amount = 630 - (630*now/100);
+                        
+                        title.text(Math.floor(now));
+                        circle.css({strokeDashoffset:amount});
+                    }
+            });
+        }); //chart each
     }
-  });
+
 });

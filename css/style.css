@@ -130,10 +130,15 @@
     outline: 1px solid red;
 }
 
+.portfolio {
+    display: flex;
+}
+
+
 /*-----------------------------section1---------------------------*/
 #section1 {
     min-height: 937px;
-    background: url(../images/main_profile_img.jpg) no-repeat center center;
+    background: url(../images/sec1/main_profile_img.jpg) no-repeat center center;
     display: flex;
 }
 
@@ -212,25 +217,68 @@
     padding-bottom: 100px;
 }
 
-#section2 .slogan_box {
-    width: 80%;
+#section2 .sub_slogan{
+    outline: 1px solid red;
+    width: 70%;
     margin: 90px auto;
-    font-size: 110px;
+
+}
+#section2 .sub_slogan .slogan_box > * {
+    display: block;
+    font-size: 5vw;
     text-align: center;
     line-height: 220px;
-    visibility: hidden;
+    transition: all 2s;
+}
+.slogan_1 {
+	opacity: 0;
+	transform: translateY(200px);
+	transform-origin: 0 0;
+	transition: all 2s;
+    transition-delay: 5s;
+
+}
+.slogan_2 {
+	opacity: 0;
+	transform: translateY(200px);
+	transition: all 10s;
+    transition-delay: 10s;
+
+}
+.slogan_3 {
+	opacity: 0;
+	transform: translateY(200px);
+	transition: all 6s;
+    transition-delay: 9s;
+
+}
+.slogan_4 {
+	opacity: 0;
+	transform: translateY(200px);
+	transition: all 8s;
+    transition-delay: 12s;
+
+}
+.slogan_1.show {
+	opacity: 1;
+	transform: translateY(0px) scaleY(1);
+}
+.slogan_2.show {
+	opacity: 1;
+	transform: translateY(0px);
+}
+.slogan_3.show {
+	opacity: 1;
+	transform: translateY(0px);
+}
+.slogan_4.show {
+	opacity: 1;
+	transform: translateY(0px);
 }
 
-.lines {
-    width: 100%;
-}
-
-.hide {
-    overflow: hidden;
-}
 
 #section2 .profile_img {
-    background: url(../images/profile_img.png) no-repeat center center / contain;
+    background: url(../images/sec2/profile_img.png) no-repeat center center / contain;
     width: 500px;
     height: 500px;
     margin: auto;
@@ -316,6 +364,7 @@
     margin-top: 10px;
 }
 
+
 /*----------------------------section 3-----------------------*/
 #section3 {
     width: 100%;
@@ -362,20 +411,9 @@ circle {
     stroke-dasharray: 628;
     stroke-dashoffset: 628;
     stroke-width: 20;
-    animation: line 2s forwards;
     transform: rotate(-90deg);
     transform-origin: 50% 50%;
     stroke-linecap: round;
-}
-
-@keyframes line {
-    from {
-        stroke-dashoffset: 628;
-    }
-
-    to {
-        stroke-dashoffset: 0;
-    }
 }
 
 #section3 .charts .chart:nth-child(1) circle {
@@ -395,6 +433,7 @@ circle {
 }
 
 /*-----------------------section4 - project1--------------------*/
+
 .portfolio.project1 {
     padding: 0;
     min-height: 100vh;
@@ -402,55 +441,53 @@ circle {
 
 .left {
     position: absolute;
-    /* transform: translateX(-100vw);
-    opacity: 0;
-    transition: all 2s ease-in-out; */
-    width: 33%;
-    left: 0;
-    top: 280px;
+    display: flex;
     left: 100px;
-
 }
-
-.left.in {
-    transform: translateX(0vw);
-    opacity: 1;
-}
-
-/*-----------------------좌측 모니터-------------------------------*/
-.mockup.left_pc {
+.mockup {
     width: 500px;
     height: 500px;
     position: relative;
-
+    top: 260px;
 }
 
-.mockup.left_pc .computer {
+.mockup .computer {
     position: absolute;
     width: 100%;
 }
+.mockup .phone{
+    position: absolute;
+    width: 110px;
+    top: 212px;
+    left: -50px;
+}
 
-.mockup.left_pc a.hidden {
+.mockup.left_pc a.hidden,.mockup.right_pc a.hidden {
     display: block;
     width: 452px;
     height: 254px;
     position: absolute;
     overflow: hidden;
-    top: 23px;
+    top: 24px;
     left: 24px;
 }
-
-.left_pc .hidden img {
-    width: 100%;
-    position: relative;
-}
-
-.mockup.left_pc .phone {
+.mockup.iphone a.hidden {
+    display: block;
+    width: 98px;
+    height: 208px;
     position: absolute;
-    width: 110px;
-    right: -50px;
-    bottom: 0;
+    overflow: hidden;
+    top: 217px;
+    left: -44px;
+    border-radius: 11px;
 }
+.hidden img {
+    position: relative;
+    width: 100%;
+}
+
+
+/*-----------------------좌측 모니터-------------------------------*/
 
 .right {
     position: absolute;
@@ -547,63 +584,75 @@ circle {
     display: block;
 }
 
-/*------------------------section 4 - project2---------------------*/
+/*-------------------------section5------------------------*/
 #section5 {
     width: 100%;
     height: 100vh;
 }
-
-.mockup.right_pc {
-    width: 500px;
-    height: 500px;
-    position: relative;
-    right: 30px;
-}
-
-.mockup.right_pc .computer {
+#section5 .left {
     position: absolute;
-    width: 100%;
+    width: 33%;
+    height: 100px;
+    left: 0;
+    top: 280px;
+    left: 100px;
 }
-
-.mockup.right_pc a.hidden {
-    display: block;
-    width: 452px;
-    height: 254px;
+#section5 .right_pc{
     position: absolute;
-    overflow: hidden;
-    top: 23px;
-    left: 24px;
+    top: 0;
 }
 
-.right_pc .hidden img {
-    width: 100%;
-    position: relative;
-}
-
-/*-------------------------section5------------------------*/
+/*-------------------------section6------------------------*/
 #section6 {
     width: 100%;
     height: 100vh;
 }
-
-#section6 .left .mockup .notebook {
-    width: 400px;
-    position: absolute;
-    top: 157px;
-    left: 200px;
-
+#section6 .left_pc{
+    margin-left: 40px;
+    left: 20px;
 }
 
+#section6 .macbook{
+    width: 350px;
+    height: 220px;
+    position: absolute;
+    top: 470px;
+    left: -100px;
+}
+#section6 .mockup .notebook{
+    position: absolute;
+    width: 100%;
+}
+#section6 .macbook a.hidden {
+    display: block;
+    width: 267px;
+    height: 168px;
+    position: absolute;
+    overflow: hidden;
+    top: 16px;
+    left: 42px;
+}
+#section6 .macbook .hidden img{
+    width: 100%;
+    position: relative;
+}
+
+/* -----------------------section7 -------------------- */
 #section7 {
     width: 100%;
     height: 100vh;
 }
+#section7 .left{
+    width: 33.3%;
+}
 
+/* -----------------------section8------------------------ */
 #section8 {
     width: 100%;
     height: 100vh;
 }
 
+/* -----------------------section9------------------------ */
 #section9 {
     width: 100%;
     height: 100vh;
