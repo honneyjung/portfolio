@@ -62,7 +62,7 @@ $(function(){
     function animateChart(){
         chart.each(function(){
             var item = $(this);
-            var title = item.find('h2');
+            var title = item.find('h3');
             var targetNum = title.attr('data-num');
             var circle = item.find('circle');
     
@@ -71,7 +71,7 @@ $(function(){
                     duration:1500,
                     progress:function(){
                         var now = this.rate;
-                        var amount = 630 - (630*now/100);
+                        var amount = 377 - (377*now/100);
                         
                         title.text(Math.floor(now));
                         circle.css({strokeDashoffset:amount});
@@ -81,3 +81,75 @@ $(function(){
     }
 
 });
+
+$(function() {
+    $(window).scroll(function(){
+        var top = $(window).scrollTop();
+        var wid = $(window).width();
+
+        var section_2=$('#section2').offset();
+        if (top>section_2.top-500) {
+            $('#section2').addClass('on');
+        }
+    })
+})
+
+/*----------마우스 커서-----------*/ 
+
+$(window).on({
+    mousemove:function(e){
+        gsap.to('.cursor', {duration: 0.2, left: e.pageX -13 , top: e.pageY -13})
+    }
+})
+
+/*-----------------이미지 팝업---------------*/
+
+
+const swiper = new Swiper(".swiper", {
+	autoplay: {
+		delay: 2500,
+	},
+	slidesPerView: 3,
+	spaceBetween: 30,
+	centeredSlides: true,
+	loop: true,
+	direction: "horizontal",
+	pagination: {
+		el: ".swiper-pagination",
+		clickable: true,
+	},
+})
+
+
+// var gallery = document.querySelector('#gallery');
+// var getVal = function (elem, style) { return parseInt(window.getComputedStyle(elem).getPropertyValue(style)); };
+// var getHeight = function (item) { return item.querySelector('.content').getBoundingClientRect().height; };
+// var resizeAll = function () {
+//     var altura = getVal(gallery, 'grid-auto-rows');
+//     var gap = getVal(gallery, 'grid-row-gap');
+//     gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+//         var el = item;
+//         el.style.gridRowEnd = "span " + Math.ceil((getHeight(item) + gap) / (altura + gap));
+//     });
+// };
+// gallery.querySelectorAll('img').forEach(function (item) {
+//     item.classList.add('byebye');
+//     if (item.complete) {
+//         console.log(item.src);
+//     }
+//     else {
+//         item.addEventListener('load', function () {
+//             var altura = getVal(gallery, 'grid-auto-rows');
+//             var gap = getVal(gallery, 'grid-row-gap');
+//             var gitem = item.parentElement.parentElement;
+//             gitem.style.gridRowEnd = "span " + Math.ceil((getHeight(gitem) + gap) / (altura + gap));
+//             item.classList.remove('byebye');
+//         });
+//     }
+// });
+// window.addEventListener('resize', resizeAll);
+// gallery.querySelectorAll('.gallery-item').forEach(function (item) {
+//     item.addEventListener('click', function () {        
+//         item.classList.toggle('full');        
+//     });
+// });
