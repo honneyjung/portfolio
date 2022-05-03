@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-water</title>
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <!-- font -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+    </style>
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/gnb.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:479px)">
+    <link rel="stylesheet" href="css/jquery.fullPage.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <!-- js -->
+    <script src="js/jquery-1.11.2.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <script src="js/detectmobilebrowser.js"></script>
+    <script src="js/jq.js"></script>
+
+    <!-- <script>
+    if(jQuery.browser.mobile==true){
+            location.href="mobile/index.html"
+        }
+	</script> -->
+    	<script>
+            $(document).ready(function() {
+            $('#fullpage').fullpage({
+                //options here
+                licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
+                autoScrolling:true,
+                scrollHorizontally: true
+            });
+        });
+        </script>
+    
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="skip">
+            <a href="#k-contents" rel="bookmark">본문 바로가기</a>
+            <a href="#gnb" rel="bookmark">상단메뉴 바로가기</a>
+        </div>
+        <header id="header">
+            <div id="gnb">
+                <div class="gnb-menu"></div>
+                <ul class="gnb-inner cf">
+                    <li>
+                        <h1 class="logo fl">
+                            <a href="index.html">
+                                <img src="images/header/k-logo.png" alt="한국수자원공사 홈페이지로 이동합니다.">
+                            </a>
+                        </h1>
+                    </li>
+                    <li class="fl">
+                        <a href="#" class="hv">열린경영</a>
+                        <ul class="depth2">
+                            <li><a href="sub.html">경영공시</a></li>
+                            <li><a href="sub.html">안전·환경</a></li>
+                            <li><a href="sub.html">지속가능·ESG경영</a></li>
+                            <li><a href="sub.html">윤리경영</a></li>
+                            <li><a href="sub.html">사회적가치실현</a></li>
+                            <li><a href="sub.html">일자리</a></li>
+                            <li><a href="sub.html">국민 참여예산</a></li>
+                            <li><a href="sub.html">사회공헌</a></li>
+                        </ul>
+                    </li>
+                    <li class="fl">
+                        <a href="#" class="hv">국민소통</a>
+                        <ul class="depth2">
+                            <li><a href="sub.html">온라인 고객센터</a></li>
+                            <li><a href="sub.html">고객헌장</a></li>
+                            <li><a href="sub.html">고객광장</a></li>
+                            <li><a href="sub.html">고객지원</a></li>
+                            <li><a href="sub.html">맑은물공급 요금</a></li>
+                            <li><a href="sub.html">정보공개</a></li>
+                        </ul>
+                    </li>
+                    <li class="fl">
+                        <a href="#" class="hv">새소식</a>
+                        <ul class="depth2">
+                            <li><a href="./sub.html">게시판</a></li>
+                            <li><a href="sub.html">채용정보</a></li>
+                            <li><a href="sub.html">뉴스룸</a></li>
+                            <li><a href="sub.html">홍보광장</a></li>
+                            <li><a href="sub.html">물사랑공모전</a></li>
+                            <li><a href="sub.html">수돗물 브런치</a></li>
+                        </ul>
+                    </li>
+                    <li class="fl">
+                        <a href="#" class="hv">대국민 서비스</a>
+                        <ul class="depth2">
+                            <li><a href="sub.html">물안심 서비스</a></li>
+                            <li><a href="sub.html">물나눔 서비스</a></li>
+                            <li><a href="sub.html">물융합 서비스</a></li>
+                        </ul>
+                    </li>
+                    <li class="fl">
+                        <a href="#" class="hv">기관소개</a>
+                        <ul class="depth2 rboder">
+                            <li><a href="sub.html">일반현황</a></li>
+                            <li><a href="sub.html">CEO</a></li>
+                            <li><a href="sub.html">조직 및 연락처</a></li>
+                            <li><a href="sub.html">CI</a></li>
+                            <li><a href="sub.html">문화관</a></li>
+                            <li><a href="sub.html">선수단</a></li>
+                            <li><a href="sub.html">찾아오시는길</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div class="top-controll fl">
+                            <a href="#" class="eng fl">ENGLISH</a>
+                            <a href="#" class="search_op fl">통합검색</a>
+                            <a href="#" class="all-menu fl">전체메뉴</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </header>
+        <div id="fullpage">
+            <div id="main-visual" class="section">
+                <div class="main-bg">
+                    <i>
+                        <img src="images/main/m-kw.png" alt="세상에 행복을 水놓다 : World Top K-water">
+                    </i>
+                </div>
+            </div> <!-- //# main-visual -->
+            <div id="k-contents" class="section">
+                <div class="inner cf k-bg01">
+                    <h3>K-water</h3>
+                    <p>국가 물안전과 국민 물복지의 초석을 다져온 K-water!</p>
+                    <div class="kwater-left-box fl">
+                        <a href="#" class="k-ltt-box">
+                            <h4>K-water CEO</h4>
+                            <p>깨끗하고 소중한 물로<br/>
+                                더 행복한 대한민국을<br/>
+                                만들겠습니다.
+                            </p>
+                            <span class="arrow">자세히보기</span>
+                        </a>
+                        <a href="#" class="k-ltbt-box fl">
+                            <h4>안전·환경</h4>
+                            <p>K-water의 안전경영헌장을 소개합니다.</p>
+                            <span class="arrow">자세히보기</span>
+                        </a>
+                    </div>
+                    <div class="k-mid-box slideWrap .img_controls fl">
+                        <div class="img_control_slider cf">
+                            <img src="images/k-water/k-popup-1.jpg" alt="">
+                            <img src="images/k-water/k-popup-2.jpg" alt="">
+                            <img src="images/k-water/k-popup-3.jpg" alt="">
+                            <img src="images/k-water/k-popup-4.jpg" alt="">
+                            <img src="images/k-water/k-popup-5.jpg" alt="">
+                        </div>
+                        <div class="imgcontrols">
+                            <strong>K-water 팝업존</strong>
+                            <span class="prev"></span>
+                            <span class="play"></span>
+                            <span class="stop"></span>
+                            <span class="next"></span>
+                        </div>
+                    </div>
+                    <a href="#" class="k-rt-box fl">
+                        <h4>조직도/직원검색</h4>
+                        <p>깨끗한 물을 만드는<br/>K-water의 가족입니다.</p>
+                        <span class="arrow">자세히보기</span>
+                    </a>
+                    <div class="k-rbot-box fl">
+                        <h4>K-water SNS</h4>
+                        <p class="k-sns cf">
+                            <button class="yt" title="새창이동,유튜브">유튜브</button>
+                            <button class="fb" title="새창이동,페이스북">페이스북</button>
+                            <button class="in" title="새창이동,인스타그램">인스타그램</button><br>
+                            <button class="nb fl" title="새창이동,네이버 블로그">네이버 블로그</button>
+                            <button class="np fl" title="새창이동,네이버 포스트">네이버 포스트</button>
+                            <button class="tw fl" title="새창이동,트위터">트위터</button>
+                            <button class="kt fl" title="새창이동,카카오톡 채널">카카오톡 채널</button>
+                        </p>
+                    </div>
+                </div><!-- //# inner -->
+            </div> <!-- //# k-contents -->
+            <div id="service" class="section">
+                <div class="inner cf">
+                    <h3>서비스</h3>
+                    <p>K-water의 서비스에 쉽고 빠르게 접근해보세요.</p>
+                    <div class="s-left-box fl">
+                        <strong>온라인 고객센터</strong>
+                        <ul>
+                            <li><a href="#">민원이용안내</a></li>
+                            <li><a href="#">정보공개안내</a></li>
+                            <li><a href="#">맑은물공급 요금안내</a></li>
+                            <li><a href="#">부패신고안내</a></li>
+                            <li><a href="#">고객요금조회</a></li>
+                        </ul>
+                    </div>
+                    <div class="s-top-box fl">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <span></span>
+                                    소통플랫폼<br/>단비톡톡
+                                </a>
+                            </li>
+                            <li><a href="#"><span></span>입찰안내</a></li>
+                            <li><a href="#"><span></span>동반성장<br/>물산업플랫폼</a></li>
+                            <li><a href="#"><span></span>분양정보</a></li>
+                        </ul>
+                    </div>
+                    <div class="s-bottom-box fl">
+                        <div class="s-botl-box fl">
+                            <ul class="botl-top">
+                                <li>
+                                    <a href="#">지방상수도포털</a>
+                                </li>
+                            </ul>
+                            <strong>나의 물정보</strong>
+                            <ul class="botl-bot">
+                                <li><a href="#">물정보포털 My Water</a></li>
+                                <li><a href="#">실시간 수문정보</a></li>
+                            </ul>
+                        </div>
+                        <div class="s-botr-box fl">
+                            <ul>
+                                <li>
+                                    <strong>고객센터</strong><br/>
+                                    <a href="tel:1020-0110">1020 - 0110</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="s-right-box fl">
+                        <strong>열린경영<span>투명 경영을 약속드립니다.</span></strong>
+                        <ul>
+                            <li><a href="#">사회적 가치실현</a></li>
+                            <li><a href="#">일자리창출</a></li>
+                            <li><a href="#">국민 참여예산</a></li>
+                            <li><a href="#">경영공시</a></li>
+                            <li><a href="#">사회공헌</a></li>
+                        </ul>
+                    </div>
+                </div> <!-- // .inner -->
+            </div> <!-- // #service -->
+            <div id="news" class="section section_wh">
+                <div class="inner">
+                    <h3>뉴스</h3>
+                    <p>K-water의 다양한 소식을 공유합니다.</p>
+                    <div class="news-all-box">
+                        <div class="noti-all-box">
+                            <div class="n-noti-box1">
+                                <h4 class="n-tit">공지</h4>
+                                <a href="#" class="n-subject">금산권지사 22년 2월 정수, 수도꼭지 수질검사 결과입니다.</a>
+                                <p class="date">2022-03-04</p>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <div class="n-noti-box2">
+                                <h4 class="n-tit">공지</h4>
+                                <a href="#" class="n-subject">대청댐계통(Ⅲ) 광역상수도사업(2차) 보상협의 공시송달 공고</a>
+                                <p class="date">2022-03-04</p>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <div class="n-noti-box3">
+                                <h4 class="n-tit">공지</h4>
+                                <a href="#" class="n-subject">[화순] 2022년 2월 정수품질검사 성적서</a>
+                                <p class="date">2022-03-04</p>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                            <div class="n-noti-box4">
+                                <h4 class="n-tit">보도</h4>
+                                <a href="#" class="n-subject">수질과 녹조 관리, 4차 산업혁명 기술로 더 빠르고 정확하게</a>
+                                <p class="date">2022-01-27</p>
+                                <a href="#" class="more">더보기</a>
+                            </div>
+                        </div>
+                        <div class="n-webzines">
+                            <a href="#" title="새창이동, 웹진">
+                                <h4>WEBZINE</h4>
+                                <p>2022년 3월 / vol.648</p>
+                            </a>
+                            <div class="btn-box">
+                                <button>웹진 보러가기</button>
+                                <button>구독 신청하기</button>
+                            </div>
+                        </div>
+                        <div class="pop_ul">
+                            <input type="radio" name="rdo" class="rdo" id="ra1" checked>
+                            <input type="radio" name="rdo" class="rdo" id="ra2">
+                            <input type="radio" name="rdo" class="rdo" id="ra3">
+                            <div class="radio_box">
+                                <label for="ra1" class="tit label1">동영상</label>
+                                <label for="ra2" class="tit label2">카드뉴스</label>
+                                <label for="ra3" class="tit label3">공공알림</label>
+                            </div>
+                            <div class="n-movies">
+                                <iframe src="https://www.youtube.com/embed/QrhgY4UuhQU?rel=0&enablejsapi=1" title="[공기업 Vlog] 수자원공사 시설운영직의 활기찬 하루 - 전남중부권지사편 [유튜브]"></iframe>
+                                <div class="news-control">
+                                    <strong>동영상</strong>
+                                </div>
+                            </div>
+                            <div class="n-card-news">
+                                <a href="#"></a>
+                                <div class="news-control">
+                                    <strong>카드뉴스</strong>
+                                </div>
+                            </div>
+                            <div class="n-popup slideWrap img_controls">
+                                <div class="img_control_slider">
+                                    <img src="images/news/n-noti-img1.jpg" alt="">
+                                    <img src="images/news/n-noti-img2.jpg" alt="">
+                                    <img src="images/news/n-noti-img3.jpg" alt="">
+                                    <img src="images/news/n-noti-img4.jpg" alt="">
+                                    <img src="images/news/n-noti-img5.jpg" alt="">
+                                    <img src="images/news/n-noti-img6.jpg" alt="">
+                                    <img src="images/news/n-noti-img7.jpg" alt="">
+                                </div>
+                                <div class="imgcontrols cf">
+                                    <strong class="fl">공공알림</strong>
+                                    <span class="prev fr"></span>
+                                    <span class="play fr"></span>
+                                    <span class="stop fr"></span>
+                                    <span class="next fr"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- .inner -->
+            </div><!-- // #news -->
+            <div id="culture" class="section ">
+                <div class="inner cf">
+                    <h3>문화</h3>
+                    <p>이 달의 K-water 문화관을 소개합니다.</p>
+                    <div class="c-left-box fl">
+                        <div class="c-txt-box">
+                            <strong>K-water<br>온라인 수도박물관</strong>
+                        </div>
+                        <a href="#" class="c-more">자세히 보기</a>
+                    </div>
+                    <div class="c-right-box fl">
+                        <div class="c-rtop-box">
+                            <div class="c-rtl-box">
+                                <a href="https://www.youtube.com/watch?v=rdwU5Q8ZSAc" target="_blank" title="돌핀커버 댄스 feat.용담댐물문화관, 유튜브 새창열림">
+                                </a>
+                            </div>
+                            <div class="c-rtr-box">
+                                <a href="https://blog.naver.com/ilovekwater/222160330436" target="_blank">
+                                    <h4>BLOG</h4>
+                                    <p>K-water가 추천하는 오천자전거길</p>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="c-rbot-box">
+                            <a href="https://www.youtube.com/c/%EC%88%98%EC%9E%90%EC%9B%90%ED%99%98%EA%B2%BD%EC%82%B0%EC%97%85%EC%A7%84%ED%9D%A5%EA%B0%95%EB%AC%B8%ED%99%94%EA%B4%80/featured" target="_blank" title="새창으로 이동"></a>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- // #culture -->
+            <div id="incruit" class="section">
+                <div class="inner cf">
+                    <h3>채용</h3>
+                    <p>K-water의 소중한 가족이 되어주세요.</p>
+                    <ul class="i-left-box fl">
+                        <li>
+                            <a href="#">
+                                <h4 class="i-icon1">인재상/복리후생</h4>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <h4 class="i-icon2">직원 평균보수 현황</h4>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="i-mid-box fl">
+                        <h4>K-water 공채</h4>
+                        <a href="#" class="i-more">더보기</a>
+                        <div class="i-board"></div>
+                    </div>
+                    <div class="i-right-box fl">
+                        <h4>K-water 수시채용</h4>
+                        <a href="#" class="i-more">더보기</a>
+                        <div class="i-list">
+                            <ul>
+                                <li>
+                                    <p><span class="new">새글</span></p>
+                                    <p><a href="#" class="fl">[영섬/광주] 영섬유역관리처 단기계약근로자 채용</a></p>
+                                    <p><span class="i-date">2022-03-04</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="new">새글</span></p>
+                                    <p><a href="#" class="fl">(한강/과천) 한강사업계획처 단기계약근로자 (수문조사) 채용 (재공고)</a></p>
+                                    <p><span class="i-date">2022-03-04</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="i-sj"></span></p>
+                                    <p><a href="#" class="fl">[본사/대전] 물관리기획처 특수직(전문사무) 채용공고</a></p>
+                                    <p><span class="i-date">2022-03-03</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="i-sj"></span></p>
+                                    <p><a href="#" class="fl">[한강/단양] 단양수도지사 고객관리사(민간 개인사업자위탁) 신규 모집 공고</a></p>
+                                    <p><span class="i-date">2022-03-02</span></p>
+                                </li>
+                                <li>
+                                    <p><span class="i-sj"></span></p>
+                                    <p><a href="#" class="fl">[본사/대전] 물관리기획처 위촉연구직(계약직) 채용</a></p>
+                                    <p><span class="i-date">2022-02-28</span></p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- //#incruit -->
+            <div id="footer" class="section fp-auto-height">
+                <div class="ft-inner">
+                    <ul class="ft-link">
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">저작권정책</a></li>
+                        <li><a href="#">직원광장</a></li>
+                        <li><a href="#">찾아오시는길</a></li>
+                    </ul>
+                    <p>
+                        
+                        <a href="https://validator.w3.org/check?uri=guslwjd7.dothome.co.kr" target="_blank">
+                            <img src="https://www.w3.org/Icons/valid-html401" alt="">
+                        </a>
+                        <a href="http://jigsaw.w3.org/css-validator/check/referer" target="_blank">
+                            <img style="border:0;width:88px;height:31px"
+                                src="http://jigsaw.w3.org/css-validator/images/vcss"
+                                alt="올바른 CSS입니다!" />
+                        </a>
+                    </p>
+                    <ul class="ft-sns cf">
+                        <li class="fl yt"><a href="#">유튜브</a></li>
+                        <li class="fl fb"><a href="#">페이스북</a></li>
+                        <li class="fl in"><a href="#">인스타그램</a></li>
+                        <li class="fl nb"><a href="#">네이버 블로그</a></li>
+                        <li class="fl np"><a href="#">네이버 포스트</a></li>
+                        <li class="fl tw"><a href="#">트위터</a></li>
+                        <li class="fl kt"><a href="#">카카오톡 채널</a></li>
+                    </ul>
+                    <div class="relate_site">
+                        <a href="#">관련사이트
+                        </a>
+                        <ul style="display: none;">
+                            <li><a href="#">My Water (물정보포털)</a></li>
+                            <li><a href="#">K-water 단비톡톡</a></li>
+                            <li><a href="#">K-water연구원</a></li>
+                            <li><a href="#">K-water 인재개발원</a></li>
+                            <li><a href="#">지방상수도포털(Water-pos)</a></li>
+                            <li><a href="#">K-water 공공데이터개방포털</a></li>
+                            <li><a href="#">K-water 물산업플랫폼</a></li>
+                            <li><a href="#">K-water 온라인청약시스템</a></li>
+                            <li><a href="#">K-water 전자조달시스템</a></li>
+                            <li><a href="#">국가가뭄정보포털</a></li>
+                            <li><a href="#">건설사업관리시스템</a></li>
+                            <li><a href="#">경인아라뱃길</a></li>
+                            <li><a href="#">국가지하수정보센터(GIMS)</a></li>
+                            <li><a href="#">댐사전검토협의회</a></li>
+                            <li><a href="#">부산에코델타시티</a></li>
+                            <li><a href="#">송산그린시티</a></li>
+                            <li><a href="#">수우회</a></li>
+                            <li><a href="#">부산 에코델타 스마트시티</a></li>
+                            <li><a href="#">시화지구지속가능발전협의회</a></li>
+                            <li><a href="#">시화호조력발전소</a></li>
+                            <li><a href="#">우리강이용도우미포털</a></li>
+                            <li><a href="#">워터웨이플러스(WW+)</a></li>
+                            <li><a href="#">환경 빅데이터 플랫폼</a></li>
+                            <li><a href="#">기술기준통합정보시스템</a></li>
+                        </ul>
+                    </div>
+                    <div class="ft-info">
+                        <span>주소 : 11001 수원시 일구 오백길로 101</span>
+                        <span class="tel">대표전화 :
+                            <a href="tel:050-3647-2677">050-3647-2677</a>
+                            / 고객센터 :
+                            <a href="tel:1020-0110">1020-0110</a>
+                        </span>
+                        <span class="copyright">Copyright © K-water All Rights Reserved.</span>
+                    </div>
+                    <div class="certifi-mark">
+                        <img src="images/footer/ft-logo-kwater.png" alt="K-water">
+                        <img src="images/footer/ft-webacc.png" alt="과학기술정보통신부  WEB ACCESSIBILITY 마크(웹 접근성 품질인증 마크)">
+                        <img src="images/footer/ft-make.png" alt="Most Admired MAKE">
+                        <img src="images/footer/ft-icsi.png" alt="ICSI">
+                        <img src="images/footer/ft-kgw.png" alt="K-GWPI">
+                        <img src="images/footer/ft-cem.png" alt="Most Admired Cempanica">
+                        <img src="images/footer/ft-re100.png" alt="RE100">
+                    </div>
+                </div>
+                <a id="go-to-top" class="top" href="#top">Top</a>
+            </div>
+        </div>
+    </div> <!-- // #wrap -->
+</body>
+<!--  -->
+</html>

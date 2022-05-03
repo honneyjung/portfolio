@@ -1,0 +1,73 @@
+/* header */
+#wrap .nav{
+    width: 100%;
+    max-height: 94px;
+    background: #000000;
+}
+#wrap .inner{
+    max-width: 1382px;
+    padding: 0 30px;
+    margin: auto;
+    background: #000000;
+} 
+#wrap .nav .inner .logo img{
+    max-width: 136px;
+    max-height: 41px;
+    margin: 26px 0;
+}
+#wrap .nav .inner .menu{
+    max-width: 298px;
+    height: 64px;
+    margin: 15px 0;
+}
+#wrap .nav .inner .menu ul{
+    position: relative;
+}
+#wrap .nav .inner .menu ul li{
+    float: left;
+    list-style: none;
+    width: 89px;
+    height: 64px;
+    text-align: center;
+}
+#wrap .nav .inner .menu ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    line-height: 64px;
+    font-family: 'ChaiGothicBold', sans-serif;
+    font-weight: 700;
+
+}
+#wrap .nav .inner .menu ul li:nth-child(3){
+    display: block;
+    width: 60px;
+    text-indent: -9999999px;
+}
+#wrap .nav .inner .menu ul li:nth-child(4){
+    display: block;
+    text-indent: -9999999px;
+    width: 60px;
+}
+#wrap .nav .inner .menu ul li .apple{
+    display: block;
+    background: url(../images/header/apple_ico.png) no-repeat center center;
+    width: 20px;
+    height: 20px;
+    line-height: 64px;
+    margin: auto;
+    position: absolute;
+    top: 22px;
+    right: 80px;
+}
+#wrap .nav .inner .menu ul li .google{
+    display: block;
+    background: url(../images/header/googleplay_ico.png) no-repeat center center;
+    width: 20px;
+    height: 20px;
+    margin: auto;
+    position: absolute;
+    top: 22px;
+    right: 19px;
+}
+

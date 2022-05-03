@@ -1,0 +1,275 @@
+@charset "utf-8";
+@media screen and (max-width: 479px){
+    #wrap{
+        overflow: hidden;
+    }
+    #wrap header .nav{
+        min-height: 75px;
+    }
+    #wrap header .nav .inner{
+        min-height: 75px;
+    }
+    #wrap header .nav .inner .menu{
+        max-width: 180px;
+    }
+    #wrap header .nav .inner .menu ul li:nth-child(3),#wrap header .nav .inner .menu ul li:nth-child(4){
+        display: none;
+    }
+    #wrap header .nav .inner .logo{
+        max-height: 28px;  
+    }
+    #wrap header .nav .inner .logo img{
+        max-height: 28px;
+        max-width: 100%;
+    }
+
+    
+    /* #wrap header{
+        width: 100%;
+        min-height: 75px;
+    }
+    #wrap header .nav{
+        min-height: 75px;
+    }
+    #wrap header .nav .inner{
+        min-height: 75px;
+    }
+    #wrap header .nav .inner .logo{
+        max-height: 28px;  
+    }
+    #wrap header .nav .inner .logo img{
+        max-height: 28px;
+        max-width: 100%;
+    }
+    header .nav .inner .menu{
+        float: right;
+        display: block;
+        height: 0;
+        transition: height 0.5s;
+        background: url(../images/header/apple_ico.png) no-repeat;
+    }
+    header .nav .inner .menu.active{
+        height: 500px;
+        transition: height 0.5s;
+    }
+    header .nav .inner .menu ul{
+        display: flex;
+        flex-direction: column;
+        position: static;
+        width: 100%;
+        outline: 1px solid red;
+    }
+    header .nav .inner .menu ul li{
+        width: 100%;
+        display: block;
+    }
+    header .nav .inner .menu ul li .apple{
+        position: static;
+    } */
+    #section .layout1{
+        padding-top: 20px;
+        max-height: 461px;
+    }
+    #section .layout1 .container{
+        margin: auto;
+        padding-top: 0;
+    }
+    #section .layout1 .container .btn_box{
+        justify-content: space-evenly;
+        margin: auto;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    #section .inner .layout1 .container .btn_box div{
+        max-width: 200px;
+        padding:18px 40px;
+        margin: 0;
+    }
+    #section .layout1 .container .main_tit{
+        font-size: 18px;
+        margin: auto;
+        text-align: center;
+        margin-top: 14%;
+        margin-bottom: 0;
+    }
+    #section .layout1 .container .main_tit h2{
+        font-size: 2em;
+        font-weight: 700;
+        margin-top: -20px;
+    }
+    #section .device_wrapper{
+        width: 45vw;
+        max-height: 550px;
+        right: 28%;
+        top: 20em;
+    }
+    #section .icon_wrapper{
+        display: flex;
+        left: 12px;
+        padding-top: 40px;
+        min-height: 300px;
+        margin-left: 3vw;
+        margin-bottom: 0;
+    }
+    #section .icon_wrapper div{
+        max-width: 25vw;
+        max-height: 25vh;
+        float: none;
+    }
+    #section .icon_wrapper div.app3{
+        margin-left: 10px;
+    }
+    #section .icon_wrapper div.app4{
+        margin-left: 7px;
+    }
+
+    /* layout2 */
+    #section .inner .layout2{
+        margin-top: 17rem;
+        margin-bottom: 0;
+        position: static;
+        display: block;
+        max-height: 900px;
+    }
+    #section .layout2 .sub_tit h2{
+        font-size: 28px;
+    }
+    #section .layout2 .service_op_box{
+        flex-direction: column;
+        max-width: 1382px;
+        min-height: 0;
+        margin-top: 0;
+    }
+    #section .layout2 .service_op_lf,#section .layout2 .service_op_md,#section .layout2 .service_op_rt{
+        width: 100%;
+        min-height: 220px;
+        margin-bottom: 17px;
+        padding: 25px 25px 35px 25px;
+    }
+    #section .layout2 .service_op_box div .content_group{
+        min-height: 392px;
+    }
+    #section .layout2 .service_op_box div .content_group .icon_box{
+        display: none;
+    }
+    #section .layout2 .service_op_box div .content_group .text_box{
+        padding-top: 30px;
+    }
+    #section .layout2 .service_op_box div .content_group .text_box h3{
+        font-size: 24px;
+        letter-spacing: 1.5px;
+    }
+    #section .layout2 .service_op_box div .content_group .text_box p{
+        font-size: 14px;
+        line-height: 1.4;
+        letter-spacing: 0.02em;
+    }
+    #section .slide_banner{
+        margin: 80px 0;
+        position: static;
+        padding-bottom: 0;
+    }
+    #section .slide_banner .slide_tit{
+        font-size: 8vh;
+        line-height: 1;
+    }
+
+    /* layout3 */
+    #section .layout3{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 100px;
+    }
+    #section .layout3 .content1,#section .layout3 .content2,#section .layout3 .content3{
+        flex-direction: column-reverse;
+        justify-content: normal;
+        max-width: 1382px;
+        max-height: 100%;
+        min-height: 0;
+    }
+    #section .layout3 div .txt_box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 36px;
+    }
+    #section .layout3 div .txt_box p{
+        max-width: 340px;
+        margin-bottom: 10px;
+        word-break: keep-all;
+    }
+    #section .layout3 div .txt_box p span{
+        font-size: 16px;
+        line-height: 1.4;
+    }
+    #section .layout3 div .txt_box h3{
+        font-size: 35px;
+        line-height: 1.1;
+        margin-bottom: 10px;
+    }
+    #section .layout3 div .mobile img{
+        max-width: 100%;
+        max-height: 100%;
+        min-height: 72%;
+        min-width: 100%;
+    }
+    #section .layout3 h2{
+        font-size: 28px;
+        line-height: 32px;
+        height: 85px;
+        word-break: keep-all;
+    }
+    #section .layout3 .img_box{
+        max-height: 293px;
+        margin-top: 20px;
+    }
+    #section .layout3 .img_box img{
+        max-width: 100%;
+        max-height: 293px;
+    }
+
+    /* footer */
+    footer{
+        max-height: 597px;
+        padding-top: 35px;
+        padding-bottom: 60em;
+    }
+    footer .inner .ft_top{
+        display: block;
+        padding-top: 0;
+    }
+    footer .inner .ft_top .ft_tp_ltbox a{
+        max-height: 18px;
+        margin-bottom: 10px;
+
+    }
+    footer .inner .ft_top .ft_tp_ltbox a img{
+        max-height: 18px;
+    }
+    footer .inner .ft_top .ft_tp_rtbox{
+        flex-flow: wrap;
+        height: 382px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+
+    }
+    footer .inner .ft_top .ft_tp_rtbox ul{
+        width: 201px;
+        max-height: 100%;
+    }
+    footer .inner .ft_top .ft_tp_rtbox ul li{
+        max-width: 201px;
+    }
+    footer .inner .ft_bottom{
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+    footer .inner .ft_bottom .ft_bt_ltbox{
+        margin-top: 30px;
+    }
+
+
+}

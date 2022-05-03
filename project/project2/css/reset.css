@@ -1,0 +1,79 @@
+@charset "utf-8";
+@font-face {
+    font-family: 'GothamBook';
+    src: url(../font/GothamBook.otf);
+}
+@font-face {
+    font-family: 'GothamBold';
+    src: url(../font/GothamBold.ttf);
+}
+
+@font-face {
+    font-family: 'ChaiGothicRegular';
+    src: url(../font/ChaiGothicRegular.ttf);
+}
+@font-face {
+    font-family: 'ChaiGothicBold';
+    src: url(../font/ChaiGothicBold.ttf);
+}
+* {box-sizing: border-box;font-family: 'ChaiGothicBold';}
+html{overflow-x: hidden;}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 14px;
+	font-family: "ChaiGothicRegular";
+    line-height: 1.5;
+}
+.fl{float: left;}
+.fr{float: right;}
+.cf:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+h1 {
+  font-size: 38px;
+  line-height: 44px;
+}
+h2 {
+  font-size: 32px;
+  line-height: 36px;
+}
+h3 {
+  font-size: 24px;
+  line-height: 30px;
+}
+h4 {
+  font-size: 18px;
+  line-height: 24px;
+}
+h5 {
+  font-size: 14px;
+  line-height: 20px;
+}
+h6 {
+  font-size: 12px;
+  line-height: 18px;
+}
